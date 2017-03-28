@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/nav_event" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/nav_gallery" />
+    </group>
+
+    <item
+        android:id="@+id/nav_camera"
+        android:title="@string/nav_course" >
+        <menu>
+            <item
+                android:id="@+id/course"
+                android:title="@string/nav_cdetail"
+                android:icon="@drawable/ic_menu_camera" />
+            <item
+                android:id="@+id/review"
+                android:title="@string/nav_std_review"
+                android:icon="@drawable/ic_menu_slideshow" />
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/nav_lat_course" />
+            <item
+                android:id="@+id/rq_course"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/nav_req_course" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_share"
+        android:title="@string/nav_about" >
+        <menu>
+            <item
+                android:id="@+id/ict_group"
+                android:title="@string/nav_ict_group"
+                android:icon="@drawable/ic_menu_share" />
+            <item
+                android:id="@+id/ict_contact"
+                android:title="@string/nav_contact_map"
+                android:icon="@drawable/ic_menu_share" />
+        </menu>
+    </item>
+
+</menu>

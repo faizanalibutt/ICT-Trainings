@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp" >
+
+    <!-- android:src="@drawable/android" !-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/CourseImageBar"
+        android:contentDescription="@string/imageIcon" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/CourseText"
+        android:text="@string/title" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:padding="@dimen/two_dp"
+        android:text="@string/desc"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/pbr"
+        style="@style/CourseImageBar.ImagePadding" />
+
+</RelativeLayout>
