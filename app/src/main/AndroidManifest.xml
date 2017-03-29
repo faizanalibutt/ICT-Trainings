@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ict_trainigs.ictapp">
+    package="ict_trainigs.ictapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -14,25 +14,23 @@
         <activity
             android:name="ict_trainings.ictapp.ICThome"
             android:label="@string/title_activity_icthome"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name="ict_trainings.ictapp.courses.course_request.Course_Registration"
-            android:label="@string/course_req"/>
-
+            android:label="@string/course_req" />
         <activity
             android:name="ict_trainings.ictapp.splash.Splash"
             android:label="@string/ictlogo">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="ict_trainings.ictapp.courses.course_detail.CourseDetail"
-            android:label="Course Detail"
-            />
+            android:label="Course Detail" />
+        <activity android:name="ict_trainings.ictapp.Main2Activity"></activity>
     </application>
 
 </manifest>
