@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutfragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.ict_trainings.icttrainings.fragment.About_Us">
+
+    <!-- <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+         <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+         !-->
+
+    <RelativeLayout
+        android:id="@+id/aboutscrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:scrollbarSize="5dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginLeft="@dimen/ten_dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ict_logo"
+            android:id="@+id/about_img"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/ictablogo" />
+
+        <TextView
+            android:id="@+id/ict_train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ict_tra"
+            android:layout_below="@+id/about_img"
+            android:textColor="@color/Jet_Black"
+            android:textSize="@dimen/fifteen_sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ict_train"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ict_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ict_des"
+                android:textColor="@color/Jet_Black"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <TextView
+                android:id="@+id/ict_beg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ict_beg"
+                android:textColor="@color/Jet_Black"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <TextView
+                android:id="@+id/online_train"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:text="@string/onltrain"
+                android:textSize="30sp"
+                android:textColor="@color/Jet_Black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ict_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:text="@string/ict_online"
+                android:textColor="@color/Jet_Black"
+                android:textSize="@dimen/fifteen_sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

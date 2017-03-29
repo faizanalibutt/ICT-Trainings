@@ -25,4 +25,28 @@
     <string name="detail">course_detail</string>
     <string name="imageIcon">Image icon for course detail</string>
     <string name="get_data">Get Data</string>
+    <string name="ict_tra">
+        ICT Trainings is a group of ICT integrators (www.ict-integrators.com), and it is a preferred
+        training partner by many organizations belonging to Telecom, Enterprise, Banking, Health Care
+        and Education sectors.
+    </string>
+    <string name="ict_des">
+        At ICT Trainings, we deliver both standard and customized/bespoke
+        training courses for a wide range of technology vendors like CiscoÂ®, JuniperÂ®, MicrosoftÂ®,
+        RedHatÂ®, AdobeÂ®, JavaÂ®, PHPÂ®, and much more! Our courses will suit beginners as well as
+        advanced users to augment their technical capabilities to excel in career. Furthermore, our
+        job section always keeps on posting local and international placements.
+    </string>
+    <string name="ict_beg">
+        Our courses will suit beginners as well as advanced users to augment their technical
+        capabilities to excel in career. Furthermore, our job section always keeps on posting local
+        and international placements.
+    </string>
+    <string name="ict_online">Online Training is the latest method in training and development.
+        We believe that live trainin is still essential, however online training offers a flexible
+        and cost effective way to gain skills. Allowing you the FREEDOM
+        to create the life you desire.</string>
+    <string name="ictablogo">ictaboutuslogo</string>
+    <string name="onltrain">Online Training</string>
+
 </resources>

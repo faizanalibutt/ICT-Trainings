@@ -5,4 +5,6 @@
     <color name="colorAccent">#F4923B</color>
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
+    <color name="Jet_Black">#162b40</color>
+    <dimen name="fifteen_sp">15sp</dimen>
 </resources>

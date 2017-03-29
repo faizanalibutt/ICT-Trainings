@@ -17,5 +17,8 @@
     <dimen name="ict_icon">300dp</dimen>
     <dimen name="five_dp">5dp</dimen>
     <dimen name="Fivedp">5dp</dimen>
+    <dimen name="twenty_dp">20dp</dimen>
+    <dimen name="hundred_twenty_dp">120dp</dimen>
+    <dimen name="forty_dp">40dp</dimen>
 
 </resources>
