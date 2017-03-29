@@ -1,32 +1,33 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentcourse"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ict_background"
-    android:id="@+id/fragmentcourse"
     tools:context="com.ict_trainings.ictapp.fragment.Course">
 
     <ProgressBar
+        android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressbar"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
     <GridView
+        android:id="@+id/ictview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/ten_dp"
-        android:columnWidth="@dimen/ict_icon"
-        android:drawSelectorOnTop="true"
-        android:gravity="center"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="@dimen/five_dp"
-        android:horizontalSpacing="@dimen/five_dp"
-        android:stretchMode="columnWidth"
-        android:focusable="true"
         android:clickable="true"
         android:clipToPadding="false"
-        android:id="@+id/ictview" />
+        android:columnWidth="@dimen/ict_icon"
+        android:drawSelectorOnTop="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/five_dp"
+        android:numColumns="auto_fit"
+        android:padding="@dimen/ten_dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/five_dp"/>
 
 </RelativeLayout>
