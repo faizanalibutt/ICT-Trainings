@@ -93,7 +93,7 @@
                 android:id="@+id/input_course"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Course Need to Learn(E.g. course name)"
+                android:hint="Course Need to Learn(e.g. course name)"
                 android:inputType="textPersonName" />
         </android.support.design.widget.TextInputLayout>
 
@@ -107,7 +107,7 @@
                 android:id="@+id/input_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Your Timings"
+                android:hint="Your Timings(e.g. morning,evening)"
                 android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
         <!-- Signup Button -->

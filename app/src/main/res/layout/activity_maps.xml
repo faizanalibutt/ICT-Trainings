@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maplayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ict_trainigs.ictapp.mpas.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        tools:layout="@layout/activity_mapembed" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/ict_adr"
+            style="@style/ContactStyle"
+            android:text="@string/ict_adr" />
+        <TextView
+            style="@style/ContactStyle"
+            android:text="@string/ict_tele" />
+    </LinearLayout>
+</RelativeLayout>

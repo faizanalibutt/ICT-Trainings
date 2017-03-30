@@ -7,4 +7,5 @@
     <color name="white">#FFFFFF</color>
     <color name="Jet_Black">#162b40</color>
     <dimen name="fifteen_sp">15sp</dimen>
+
 </resources>

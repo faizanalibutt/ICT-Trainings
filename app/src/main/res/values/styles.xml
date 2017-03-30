@@ -47,4 +47,13 @@
         <item name="android:padding">40dp</item>
     </style>
 
+
+    <style name="ContactStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Jet_Black</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+        <item name="android:layout_margin">@dimen/five_dp</item>
+    </style>
+
 </resources>

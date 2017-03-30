@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +16,8 @@
         <activity
             android:name="ict_trainings.ictapp.ICThome"
             android:label="@string/title_activity_icthome"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
             android:name="ict_trainings.ictapp.courses.course_request.Course_Registration"
             android:label="@string/course_req" />
@@ -27,10 +30,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="ict_trainings.ictapp.maps.MapsActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
         <activity
             android:name="ict_trainings.ictapp.courses.course_detail.CourseDetail"
             android:label="Course Detail" />
-        <activity android:name="ict_trainings.ictapp.Main2Activity"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
     </application>
 
 </manifest>

@@ -49,4 +49,13 @@
     <string name="ictablogo">ictaboutuslogo</string>
     <string name="onltrain">Online Training</string>
 
+    <string name="title_activity_maps">Contact and Map</string>
+    <string name="map_txt">Welcom to the google maps api first assignment</string>
+    <string name="map">Hello maps!</string>
+    <string name="ict_adr"><![CDATA[Address: 349-H/3, Johar Town, Lahore 54700, Pakistan.
+    [Near Expo Center Towards Mughal Eye Hospital Opp. CITY School Ravi Campus]]]></string>
+    <string name="ict_co">Contact Us</string>
+    <string name="ict_tele"><![CDATA[Tel: +92–42–35951406, Cell: +92-321-3499131 
+    Fax: +92-42-35951406]]></string>
+
 </resources>
