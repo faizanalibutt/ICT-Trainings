@@ -36,7 +36,7 @@ import static ict_trainings.ictapp.courses.helper.fragment.Course.PHOTOS_BASE_UR
 public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.model.Course> {
 
     private Context context;
-    private ProgressBar progressBar;
+//    private ProgressBar progressBar;
     private List<ict_trainings.ictapp.courses.helper.model.Course> courseList;
     private OkHttpClient okHttpClient = new OkHttpClient();
 
@@ -52,26 +52,26 @@ public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.mod
         LayoutInflater inflater = (LayoutInflater) context.getSystemService
                 (Activity.LAYOUT_INFLATER_SERVICE);
         @SuppressLint("ViewHolder") View view =
-                inflater.inflate(R.layout.course_grid, parent, false);
+                inflater.inflate(R.layout.dynamic_list, parent, false);
         ict_trainings.ictapp.courses.helper.model.Course course = courseList.get(position);
 
 //        progressBar = (ProgressBar) view.findViewById(R.id.pbr);
 //        progressBar.setVisibility(View.VISIBLE);
         if (course.getBitmap() != null) {
-            TextView textTitle = (TextView) view.findViewById(R.id.course_title);
+            TextView textTitle = (TextView) view.findViewById(R.id.list_title);
             textTitle.setText(course.getCourseTitle());
-            TextView textDesc = (TextView) view.findViewById(R.id.starting_time);
+            TextView textDesc = (TextView) view.findViewById(R.id.list_desc);
             textDesc.setText(course.getCourseDes());
         } else {
-            TextView textTitle = (TextView) view.findViewById(R.id.course_title);
-            textTitle.setText(course.getCourseTitle());
-            TextView textDesc = (TextView) view.findViewById(R.id.days);
-            textDesc.setText(course.getCourseDes());
             CourseView container = new CourseView();
             container.course = course;
             container.view = view;
             CourseImage loader = new CourseImage();
             loader.execute(container);
+            TextView textTitle = (TextView) view.findViewById(R.id.list_title);
+            textTitle.setText(course.getCourseTitle());
+            TextView textDesc = (TextView) view.findViewById(R.id.list_desc);
+            textDesc.setText(course.getCourseDes());
         }
         return view;
     }
@@ -97,7 +97,6 @@ public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.mod
                 // TODO: 3/14/2017 reuse the given link to download banners
                 String imageURL =
                         PHOTOS_BASE_URL_ICONS + course.getCourseIcon();
-                Log.d(ict_trainings.ictapp.courses.helper.json.Course.TAG, imageURL);
                 HttpURLConnection httpURLConnection = okHttpClient.open(new URL(imageURL));
                 InputStream inputStream = httpURLConnection.getInputStream();
                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
@@ -113,11 +112,10 @@ public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.mod
         @Override
         protected void onPostExecute(CourseView courseView) {
             super.onPostExecute(courseView);
-            ImageView imageView = (ImageView) courseView.view.findViewById(R.id.course_detail_image_grid);
+            ImageView imageView = (ImageView) courseView.view.findViewById(R.id.list_imageView);
             imageView.setImageBitmap(courseView.bitmap);
             courseView.course.setBitmap(courseView.bitmap);
 //            progressBar.setVisibility(View.INVISIBLE);
         }
     }
-
 }

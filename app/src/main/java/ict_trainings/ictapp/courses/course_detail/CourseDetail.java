@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.squareup.okhttp.OkHttpClient;
 
@@ -59,6 +60,7 @@ public class CourseDetail extends AppCompatActivity {
 //                textTitle.setText(course.getCourseTitle());
 //                TextView textDesc = (TextView) findViewById(R.id.desc);
 //                textDesc.setText(course.getCourseDes());
+                Toast.makeText(this,"loading....", Toast.LENGTH_SHORT).show();
             } else {
 //                TextView textTitle = (TextView) findViewById(R.id.title);
 //                textTitle.setText(course.getCourseTitle());

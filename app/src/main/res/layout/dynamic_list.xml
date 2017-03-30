@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="100dp"
-    android:orientation="vertical"
-    android:layout_marginTop="50dp" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
 
-    <!-- android:src="@drawable/android" !-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/eight_dp"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        style="@style/CourseImageBar"
-        android:contentDescription="@string/imageIcon" />
+        <!-- android:src="@drawable/android" !-->
 
-    <TextView
-        android:id="@+id/title"
-        style="@style/CourseText"
-        android:text="@string/title" />
+        <ImageView
+            android:id="@+id/list_imageView"
+            style="@style/CourseImageBar"
+            android:contentDescription="@string/imageIcon"
+            android:scaleType="fitXY"/>
 
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_toRightOf="@+id/imageView"
-        android:padding="@dimen/two_dp"
-        android:text="@string/desc"
-        android:textColor="@android:color/black"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/list_title"
+            style="@style/CourseText"
+            android:layout_toEndOf="@+id/list_imageView"
+            android:layout_toRightOf="@+id/list_imageView"
+            android:text="@string/title"/>
 
-    <ProgressBar
-        android:id="@+id/pbr"
-        style="@style/CourseImageBar.ImagePadding" />
+        <TextView
+            android:id="@+id/list_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_title"
+            android:layout_toEndOf="@+id/list_imageView"
+            android:layout_toRightOf="@+id/list_imageView"
+            android:padding="@dimen/two_dp"
+            android:text="@string/desc"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"/>
 
-</RelativeLayout>
+        <!--
+        <ProgressBar
+            android:id="@+id/pbr"
+            style="@style/CourseImageBar.ImagePadding"/>
+            !-->
+    </RelativeLayout>
+</LinearLayout>

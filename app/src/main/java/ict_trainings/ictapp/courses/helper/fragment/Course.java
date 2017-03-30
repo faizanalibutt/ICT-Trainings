@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class Course extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     private List<ict_trainings.ictapp.courses.helper.model.Course> courseList;
-    private GridView courseGridView;
+    private ListView courseView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -70,8 +71,8 @@ public class Course extends Fragment {
         View view = inflater.inflate(R.layout.fragment_course, container, false);
         progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
-        courseGridView = (GridView) view.findViewById(R.id.ictview);
-        courseGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        courseView = (ListView) view.findViewById(R.id.listViewfragment);
+        courseView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ict_trainings.ictapp.courses.helper.model.Course course = courseList.get(position);
@@ -112,7 +113,7 @@ public class Course extends Fragment {
                 ict_trainings.ictapp.courses.helper.adapter.Course(getActivity(),
                 R.layout.dynamic_list,
                 courseList);
-        courseGridView.setAdapter(courseAdapter);
+        courseView.setAdapter(courseAdapter);
     }
 
     private class MyTask extends AsyncTask<String, String, String> {
