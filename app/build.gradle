@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "ict_trainigs.ict_nav"
+        applicationId "ict_trainigs.ictapp"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
