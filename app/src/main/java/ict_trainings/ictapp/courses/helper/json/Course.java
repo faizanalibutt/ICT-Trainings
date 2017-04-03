@@ -30,13 +30,13 @@ public class Course {
                         ict_trainings.ictapp.courses.helper.model.Course();
                 //course.setCourseVersion(jsonObject.getString("courseVersion "));
                 course.setCourseTitle(jsonObject.getString("title"));
-                course.setStartingDate(jsonObject.getString("starting_date"));
-                course.setDays(jsonObject.getString("days"));
-                course.setCourseDuration(jsonObject.getString("duration"));
-                course.setCourseCharges(jsonObject.getString("charges"));
+                course.setCourseDes(jsonObject.getString("description"));
+//                course.setStartingDate(jsonObject.getString("starting_date"));
+//                course.setDays(jsonObject.getString("days"));
+//                course.setCourseDuration(jsonObject.getString("duration"));
+//                course.setCourseCharges(jsonObject.getString("charges"));
                 course.setCourseIcon(jsonObject.getString("icon"));
                 course.setCourseBanner(jsonObject.getString("banner"));
-                course.setCourseDes(jsonObject.getString("description"));
                 //course.setCourseLink1(jsonObject.getString("courseLink1 "));
                 //course.setCourseLink2(jsonObject.getString("courseLink2 "));
                 //course.setCourseCurrentBatch(jsonObject.getString("courseCurrentBatch"));
