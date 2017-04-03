@@ -1,4 +1,4 @@
-package ict_trainings.ictapp.rate;
+package ict_trainings.ictapp.courses.course_review.rate;
 
 import android.content.Context;
 import android.os.Bundle;

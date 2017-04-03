@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="ict_trainings.ictapp.rate.rate">
+        <activity android:name="ict_trainings.ictapp.courses.course_review.rate.rate">
         </activity>
         <activity
             android:name="ict_trainings.ictapp.maps.MapsActivity"

@@ -18,7 +18,7 @@ import ict_trainings.ictapp.courses.course_request.Course_Registration;
 import ict_trainings.ictapp.courses.helper.fragment.Course;
 import ict_trainings.ictapp.events.Events;
 import ict_trainings.ictapp.maps.MapsActivity;
-import ict_trainings.ictapp.rate.rate;
+import ict_trainings.ictapp.courses.course_review.rate.rate;
 
 
 
