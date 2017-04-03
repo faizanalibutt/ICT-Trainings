@@ -6,8 +6,10 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+import static ict_trainings.ictapp.courses.helper.fragment.Course.API_LINK;
+
 class CourseRequest extends StringRequest {
-    private static final String REGISTER_REQUEST_URL = "http://myfoodora.com/php/RequestCourse.php";
+    private static final String REGISTER_REQUEST_URL = "http://" + API_LINK +"/php/RequestCourse.php";
     private Map<String, String> params;
 
     CourseRequest(String fname, String lname, String email,

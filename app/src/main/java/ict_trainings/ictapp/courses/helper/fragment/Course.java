@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -22,10 +21,13 @@ import ict_trainings.ictapp.HttpManager;
 
 public class Course extends Fragment {
 
+    public static final String API_LINK = "192.168.1.18";
     public static final String PHOTOS_BASE_URL_ICONS =
-            "http://myfoodora.com/php/images/ict_course_images/icons/";
+            "http://"+ API_LINK + "/php/images/ict_course_images/icons/";
+
     public static final String PHOTOS_BASE_URL_BANNERS =
-            "http://myfoodora.com/php/images/ict_course_images/banners/";
+            "http://" + API_LINK + "/php/images/ict_course_images/banners/";
+
     public ProgressBar progressBar;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -50,11 +52,12 @@ public class Course extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // TODO: 3/8/2017 hello change link to myfoodora/php/api
+        // TODO: 3/8/2017 hello change link to myfoodora / php / api
         if (isOnline()) {
-            requestData("http://myfoodora.com/php/getCourseImagesGrid.php");
+            requestData("http://"+ API_LINK + "/php/getCourseImages.php");
         } else
-            Toast.makeText(getActivity(), "Network isn't available", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Network isn't available",
+                    Toast.LENGTH_LONG).show();
     }
 
     protected boolean isOnline() {
