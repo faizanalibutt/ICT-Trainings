@@ -17,6 +17,7 @@ import ict_trainings.ictapp.about.About_ICT;
 import ict_trainings.ictapp.courses.course_detail.CourseDetail;
 import ict_trainings.ictapp.courses.course_request.Course_Registration;
 import ict_trainings.ictapp.courses.helper.fragment.Course;
+import ict_trainings.ictapp.events.Events;
 import ict_trainings.ictapp.maps.MapsActivity;
 import ict_trainings.ictapp.rate.rate;
 
@@ -95,6 +96,9 @@ public class ICThome extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.review) {
             Intent intent = new Intent(ICThome.this, rate.class);
+            startActivity(intent);
+        } else if(id == R.id.events) {
+            Intent intent = new Intent(ICThome.this, Events.class);
             startActivity(intent);
         }
 
