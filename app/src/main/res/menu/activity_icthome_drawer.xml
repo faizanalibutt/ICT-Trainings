@@ -7,7 +7,7 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/nav_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/events"
             android:icon="@drawable/ic_menu_share"
             android:title="@string/nav_event" />
         <item
@@ -29,7 +29,7 @@
                 android:title="@string/nav_std_review"
                 android:icon="@drawable/ic_menu_slideshow" />
             <item
-                android:id="@+id/nav_manage"
+                android:id="@+id/latest_courses"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="@string/nav_lat_course" />
             <item
@@ -51,7 +51,6 @@
                 android:id="@+id/ict_contact"
                 android:title="@string/nav_contact_map"
                 android:icon="@drawable/ic_menu_share" />
-
         </menu>
     </item>
 
