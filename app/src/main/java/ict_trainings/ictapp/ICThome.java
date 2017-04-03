@@ -8,7 +8,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -21,6 +20,8 @@ import ict_trainings.ictapp.events.Events;
 import ict_trainings.ictapp.maps.MapsActivity;
 import ict_trainings.ictapp.rate.rate;
 
+
+
 public class ICThome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         Course.OnFragmentInteractionListener {
@@ -29,7 +30,7 @@ public class ICThome extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icthome);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -97,7 +98,7 @@ public class ICThome extends AppCompatActivity
         } else if (id == R.id.review) {
             Intent intent = new Intent(ICThome.this, rate.class);
             startActivity(intent);
-        } else if(id == R.id.events) {
+        } else if (id == R.id.events) {
             Intent intent = new Intent(ICThome.this, Events.class);
             startActivity(intent);
         }

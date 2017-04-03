@@ -2,7 +2,6 @@ package ict_trainings.ictapp.about;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.view.ViewGroup;
 import ict_trainigs.ictapp.R;
 
 
-public class About_ICT extends Fragment {
+public class About_ICT extends android.support.v4.app.Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
