@@ -5,8 +5,10 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -103,6 +105,9 @@ public class Course extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
+        @SuppressWarnings("StatementWithEmptyBody")
+        boolean onNavigationItemSelected(@NonNull MenuItem item);
+
         void OnItemSelected(ict_trainings.ictapp.courses.helper.model.Course course);
     }
 
