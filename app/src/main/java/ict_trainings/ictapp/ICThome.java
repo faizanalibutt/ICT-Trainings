@@ -18,6 +18,7 @@ import ict_trainings.ictapp.courses.course_detail.CourseDetail;
 import ict_trainings.ictapp.courses.course_request.Course_Registration;
 import ict_trainings.ictapp.courses.helper.fragment.Course;
 import ict_trainings.ictapp.maps.MapsActivity;
+import ict_trainings.ictapp.rate.rate;
 
 public class ICThome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -83,19 +84,18 @@ public class ICThome extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace
                     (R.id.fragmentContainer, course).commit();
         } else if (id == R.id.rq_course) {
-        	Intent intent = new Intent(ICThome.this, Course_Registration.class);
+            Intent intent = new Intent(ICThome.this, Course_Registration.class);
             startActivity(intent);
-        } else {
-            if (id == R.id.ict_group) {
-                About_ICT ab_ict = About_ICT.newInstance("about1", "about2");
-                getSupportFragmentManager().beginTransaction().replace
-                        (R.id.fragmentContainer, ab_ict).commit();
-            } else {
-                if (id == R.id.ict_contact) {
-                    Intent intent = new Intent(ICThome.this, MapsActivity.class);
-                    startActivity(intent);
-                }
-            }
+        } else if (id == R.id.ict_group) {
+            About_ICT ab_ict = About_ICT.newInstance("about1", "about2");
+            getSupportFragmentManager().beginTransaction().replace
+                    (R.id.fragmentContainer, ab_ict).commit();
+        } else if (id == R.id.ict_contact) {
+            Intent intent = new Intent(ICThome.this, MapsActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.review) {
+            Intent intent = new Intent(ICThome.this, rate.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

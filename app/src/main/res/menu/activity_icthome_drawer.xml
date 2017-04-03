@@ -51,6 +51,7 @@
                 android:id="@+id/ict_contact"
                 android:title="@string/nav_contact_map"
                 android:icon="@drawable/ic_menu_share" />
+
         </menu>
     </item>
 
