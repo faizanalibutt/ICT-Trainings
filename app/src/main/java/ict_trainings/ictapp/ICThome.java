@@ -16,6 +16,7 @@ import ict_trainings.ictapp.about.About_ICT;
 import ict_trainings.ictapp.courses.course_detail.CourseDetail;
 import ict_trainings.ictapp.courses.course_request.Course_Registration;
 import ict_trainings.ictapp.courses.helper.fragment.Course;
+import ict_trainings.ictapp.courses.latest_courses.latest_courses;
 import ict_trainings.ictapp.events.Events;
 import ict_trainings.ictapp.maps.MapsActivity;
 import ict_trainings.ictapp.courses.course_review.rate.rate;
@@ -88,7 +89,10 @@ public class ICThome extends AppCompatActivity
         } else if (id == R.id.rq_course) {
             Intent intent = new Intent(ICThome.this, Course_Registration.class);
             startActivity(intent);
-        } else if (id == R.id.ict_group) {
+        } else if (id == R.id.latest_courses) {
+            Intent intent = new Intent(ICThome.this, latest_courses.class);
+            startActivity(intent);
+        }else if (id == R.id.ict_group) {
             About_ICT ab_ict = About_ICT.newInstance("about1", "about2");
             getSupportFragmentManager().beginTransaction().replace
                     (R.id.fragmentContainer, ab_ict).commit();
