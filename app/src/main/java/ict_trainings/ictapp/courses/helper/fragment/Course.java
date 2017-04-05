@@ -23,7 +23,7 @@ import ict_trainings.ictapp.HttpManager;
 
 public class Course extends Fragment {
 
-    public static final String API_LINK = "192.168.1.18";
+    public static final String API_LINK = "192.168.1.17";
     public static final String PHOTOS_BASE_URL_ICONS =
             "http://"+ API_LINK + "/php/images/ict_course_images/icons/";
 

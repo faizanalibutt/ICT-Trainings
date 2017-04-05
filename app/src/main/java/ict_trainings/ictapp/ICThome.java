@@ -20,6 +20,7 @@ import ict_trainings.ictapp.courses.latest_courses.latest_courses;
 import ict_trainings.ictapp.events.Events;
 import ict_trainings.ictapp.gallery.helper.fragment.ImageGallery;
 import ict_trainings.ictapp.gallery.helper.model.Image;
+import ict_trainings.ictapp.home.Home;
 import ict_trainings.ictapp.maps.MapsActivity;
 import ict_trainings.ictapp.courses.course_review.rate.rate;
 
@@ -110,6 +111,10 @@ public class ICThome extends AppCompatActivity
             ImageGallery gallery = ImageGallery.newInstance("course1", "course2");
             getSupportFragmentManager().beginTransaction().replace
                     (R.id.fragmentContainer, gallery).commit();
+        } else if (id == R.id.nav_home){
+            Home home = new Home();
+            getSupportFragmentManager().beginTransaction().add
+                    (R.id.fragmentContainer, home).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
