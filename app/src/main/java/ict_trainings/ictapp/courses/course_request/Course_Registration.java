@@ -24,7 +24,7 @@ import ict_trainigs.ictapp.R;
 // TODO: 3/27/2017 must see here any error may occur
 
 public class Course_Registration extends AppCompatActivity {
-    private static final String TAG = "Register Course";
+    private static final String TAG = "Register Image";
 
     @Bind(R.id.input_name1)
     EditText _nameText1;
@@ -70,7 +70,7 @@ public class Course_Registration extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(Course_Registration.this,
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Course Requesting...");
+        progressDialog.setMessage("Image Requesting...");
         progressDialog.show();
 
         String fname = _nameText1.getText().toString();
@@ -89,7 +89,7 @@ public class Course_Registration extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
                     if (success) {
                         // TODO: 3/8/2017 make change here for new activity
-                        Toast.makeText(Course_Registration.this, "Course Registered Successfully",
+                        Toast.makeText(Course_Registration.this, "Image Registered Successfully",
                                 Toast.LENGTH_LONG).show();
                     } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(
