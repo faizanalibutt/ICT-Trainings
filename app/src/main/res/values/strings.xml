@@ -23,7 +23,7 @@
     <string name="course_detail_image">course_detail_Image</string>
     <string name="banner">banner</string>
     <string name="detail">course_detail</string>
-    <string name="imageIcon">Image icon for course detail</string>
+    <string name="imageIcon">Image icon for image detail</string>
     <string name="get_data">Get Data</string>
     <string name="ict_tra">
         ICT Trainings is a group of ICT integrators (www.ict-integrators.com), and it is a preferred
@@ -57,5 +57,9 @@
     <string name="ict_co">Contact Us</string>
     <string name="ict_tele"><![CDATA[Tel: +92–42–35951406, Cell: +92-321-3499131 
     Fax: +92-42-35951406]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_gallery">Image_Gallery</string>
 
 </resources>

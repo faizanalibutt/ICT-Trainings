@@ -22,6 +22,7 @@
     <dimen name="forty_dp">40dp</dimen>
     <dimen name="list_dp">8dp</dimen>
     <dimen name="eight_dp">8dp</dimen>
+    <dimen name="twelve_dp">12sp</dimen>
 
 
 </resources>

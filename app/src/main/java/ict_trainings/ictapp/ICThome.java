@@ -18,14 +18,15 @@ import ict_trainings.ictapp.courses.course_request.Course_Registration;
 import ict_trainings.ictapp.courses.helper.fragment.Course;
 import ict_trainings.ictapp.courses.latest_courses.latest_courses;
 import ict_trainings.ictapp.events.Events;
+import ict_trainings.ictapp.gallery.helper.fragment.ImageGallery;
+import ict_trainings.ictapp.gallery.helper.model.Image;
 import ict_trainings.ictapp.maps.MapsActivity;
 import ict_trainings.ictapp.courses.course_review.rate.rate;
 
 
-
 public class ICThome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        Course.OnFragmentInteractionListener {
+        Course.OnFragmentInteractionListener, ImageGallery.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +106,10 @@ public class ICThome extends AppCompatActivity
         } else if (id == R.id.events) {
             Intent intent = new Intent(ICThome.this, Events.class);
             startActivity(intent);
+        } else if (id == R.id.gallery){
+            ImageGallery gallery = ImageGallery.newInstance("course1", "course2");
+            getSupportFragmentManager().beginTransaction().replace
+                    (R.id.fragmentContainer, gallery).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -119,5 +124,10 @@ public class ICThome extends AppCompatActivity
         intent.putExtra(ict_trainings.ictapp.courses.helper.model.Course.COURSE_BUNDLE, bundle);
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void OnItemSelected(Image image) {
+
     }
 }
