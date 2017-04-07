@@ -31,8 +31,8 @@ public class HomeImageAdapter extends PagerAdapter {
     }
 
     private int[] sliderImagesId = new int[]{
-            R.drawable.androdi_banner, R.drawable.android, R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_gallery, R.drawable.ic_menu_send, R.drawable.ict_background,
+            R.drawable.a, R.drawable.b, R.drawable.c,
+            R.drawable.d, R.drawable.e, R.drawable.f,R.drawable.g,R.drawable.h,
     };
 
     @Override

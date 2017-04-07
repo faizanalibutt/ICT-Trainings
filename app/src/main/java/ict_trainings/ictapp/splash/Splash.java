@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import ict_trainigs.ictapp.R;
 import ict_trainings.ictapp.ICThome;
+import ict_trainings.ictapp.home.Home;
 
 public class Splash extends AppCompatActivity {
 
