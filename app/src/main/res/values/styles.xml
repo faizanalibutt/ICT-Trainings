@@ -26,9 +26,6 @@
     <style name="CourseImageBar">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
-        <item name="android:layout_marginStart"
-              tools:targetApi="jelly_bean_mr1">@dimen/Fivedp</item>
-        <item name="android:layout_marginLeft">@dimen/Fivedp</item>
     </style>
 
     <style name="CourseText">
@@ -53,6 +50,20 @@
         <item name="android:textColor">@color/Jet_Black</item>
         <item name="android:textSize">@dimen/fifteen_sp</item>
         <item name="android:layout_margin">@dimen/five_dp</item>
+    </style>
+
+    <style name="ListTextDesc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/list_title</item>
+        <item name="android:layout_toEndOf">@+id/list_imageView</item>
+        <item name="android:layout_toRightOf">@+id/list_imageView</item>
+        <item name="android:padding">@dimen/two_dp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:maxLength">600</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>

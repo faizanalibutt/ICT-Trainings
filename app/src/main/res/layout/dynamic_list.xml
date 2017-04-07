@@ -16,9 +16,7 @@
         android:layout_marginTop="@dimen/eight_dp"
         tools:ignore="UselessParent"
         android:background="@color/white">
-
         <!-- android:src="@drawable/android" !-->
-
         <ImageView
             android:id="@+id/list_imageView"
             style="@style/CourseImageBar"
@@ -34,16 +32,8 @@
 
         <TextView
             android:id="@+id/list_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/list_title"
-            android:layout_toEndOf="@+id/list_imageView"
-            android:layout_toRightOf="@+id/list_imageView"
-            android:padding="@dimen/two_dp"
             android:text="@string/desc"
-            android:textColor="@android:color/black"
-            android:textSize="12sp"/>
-
+            style="@style/ListTextDesc"/>
         <!--
         <ProgressBar
             android:id="@+id/pbr"

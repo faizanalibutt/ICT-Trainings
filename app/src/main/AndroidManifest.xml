@@ -21,8 +21,7 @@
             android:name="ict_trainings.ictapp.courses.course_request.Course_Registration"
             android:label="@string/course_req" />
         <activity
-            android:name="ict_trainings.ictapp.splash.Splash"
-            android:label="@string/ictlogo">
+            android:name="ict_trainings.ictapp.splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
