@@ -28,6 +28,7 @@ public class Course {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 ict_trainings.ictapp.courses.helper.model.Course course = new
                         ict_trainings.ictapp.courses.helper.model.Course();
+                course.setCourseId(jsonObject.getInt("user_id"));
                 //course.setCourseVersion(jsonObject.getString("courseVersion "));
                 course.setCourseTitle(jsonObject.getString("title"));
                 course.setCourseDes(jsonObject.getString("description"));

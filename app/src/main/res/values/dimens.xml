@@ -23,6 +23,7 @@
     <dimen name="list_dp">8dp</dimen>
     <dimen name="eight_dp">8dp</dimen>
     <dimen name="twelve_dp">12sp</dimen>
+    <dimen name="view">200dp</dimen>
 
 
 </resources>

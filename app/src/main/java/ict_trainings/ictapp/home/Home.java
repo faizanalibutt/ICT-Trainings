@@ -65,7 +65,7 @@ public class Home extends Fragment {
                                 page = 0;
                                 pageSwitcher(5);
                             }
-                        }, 10000);
+                        }, 3000);
                     } else {
                         mViewPager.setCurrentItem(page++);
                     }

@@ -1,27 +1,22 @@
 package ict_trainings.ictapp.courses.helper.fragment;
 
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import java.util.List;
 
 import ict_trainigs.ictapp.R;
 import ict_trainings.ictapp.HttpManager;
 
-public class Course extends Fragment {
+public class Course extends ListFragment {
 
     public static final String API_LINK = "muhammadtayyab.info";
     public static final String PHOTOS_BASE_URL_ICONS =
@@ -30,12 +25,12 @@ public class Course extends Fragment {
     public static final String PHOTOS_BASE_URL_BANNERS =
             "http://" + API_LINK + "/php/images/ict_course_images/banners/";
 
+
     public ProgressBar progressBar;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private List<ict_trainings.ictapp.courses.helper.model.Course> courseList;
-    private ListView courseView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -52,39 +47,20 @@ public class Course extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: 3/8/2017 hello change link to myfoodora / php / api
-        if (isOnline()) {
-            requestData("http://"+ API_LINK + "/php/getCourseImages.php");
-        } else
-            Toast.makeText(getActivity(), "Network isn't available",
-                    Toast.LENGTH_LONG).show();
-    }
-
-    protected boolean isOnline() {
-        // TODO: 3/9/2017 point to be noted we have to use getActivity to get SystemService
-        ConnectivityManager connectivityManager =
-                (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        return networkInfo != null && networkInfo.isConnectedOrConnecting();
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_course, container, false);
+        requestData("http://"+ API_LINK + "/php/getCourseImages.php");
         progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
-        courseView = (ListView) view.findViewById(R.id.listViewfragment);
-        courseView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ict_trainings.ictapp.courses.helper.model.Course course = courseList.get(position);
-                mListener.OnItemSelected(course);
-            }
-        });
         return view;
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        ict_trainings.ictapp.courses.helper.model.Course course = courseList.get(position);
+        mListener.OnItemSelected(course);
     }
 
     @Override
@@ -105,9 +81,6 @@ public class Course extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
-        @SuppressWarnings("StatementWithEmptyBody")
-        boolean onNavigationItemSelected(@NonNull MenuItem item);
-
         void OnItemSelected(ict_trainings.ictapp.courses.helper.model.Course course);
     }
 
@@ -121,7 +94,7 @@ public class Course extends Fragment {
                 ict_trainings.ictapp.courses.helper.adapter.Course(getActivity(),
                 R.layout.dynamic_list,
                 courseList);
-        courseView.setAdapter(courseAdapter);
+        setListAdapter(courseAdapter);
     }
 
     private class MyTask extends AsyncTask<String, String, String> {
