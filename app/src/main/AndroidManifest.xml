@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ict_trainigs.ictapp">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="ict_trainigs.ictapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -39,7 +40,8 @@
         <activity
             android:name="ict_trainings.ictapp.courses.course_detail.CourseDetail"
             android:label="Course Detail"
-            android:parentActivityName="ict_trainings.ictapp.ICThome" />
+            android:parentActivityName="ict_trainings.ictapp.ICThome"
+            tools:targetApi="jelly_bean"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

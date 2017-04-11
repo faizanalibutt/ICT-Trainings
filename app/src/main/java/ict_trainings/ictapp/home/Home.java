@@ -59,10 +59,10 @@ public class Home extends Fragment {
 //                        // Showing a toast for just testing purpose
 //                        Toast.makeText(getActivity(), "Timer stopped",
 //                                Toast.LENGTH_LONG).show();
+                        page = 0;
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                page = 0;
                                 pageSwitcher(3);
                             }
                         }, 3000);

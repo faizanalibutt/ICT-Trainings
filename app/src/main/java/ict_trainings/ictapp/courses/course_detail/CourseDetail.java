@@ -263,7 +263,6 @@ public class CourseDetail extends AppCompatActivity {
         finish();
         Intent intent = new Intent(CourseDetail.this, ICThome.class);
         startActivity(intent);
-        super.onBackPressed();
     }
 
     //    @Override
