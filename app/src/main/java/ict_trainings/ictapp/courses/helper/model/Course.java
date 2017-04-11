@@ -13,12 +13,13 @@ public class Course {
     }
 
     //    public static final String COURSE_VERSION = "courseVersion ";
-    public static final String COURSE_TITLE = "title";
-    public static final String COURSE_STARTING_DATE = "starting_date";
-    public static final String COURSE_DAYS = "days";
-    public static final String COURSE_DURATION = "duration";
+    public static final String COURSE_ID = "user_id";
+    private static final String COURSE_TITLE = "title";
+    private static final String COURSE_STARTING_DATE = "starting_date";
+    private static final String COURSE_DAYS = "days";
+    private static final String COURSE_DURATION = "duration";
     public static final String COURSE_CHARGES = "charges";
-    public static final String COURSE_ICON = "icon";
+    private static final String COURSE_ICON = "icon";
     public static final String COURSE_BANNER = "banner";
     public static final String COURSE_DES = "description";
 //    public static final String COURSE_LINK1 = "courseLink1";
@@ -32,6 +33,7 @@ public class Course {
     public Bundle toBundle() {
         Bundle bundle = new Bundle();
 //        bundle.putString(COURSE_VERSION,this.courseVersion);
+        bundle.putInt(COURSE_ID, this.courseId);
         bundle.putString(COURSE_TITLE, this.courseTitle);
         bundle.putString(COURSE_STARTING_DATE, this.startingDate);
         bundle.putString(COURSE_DAYS, this.days);
@@ -52,6 +54,7 @@ public class Course {
     public Course(Bundle bundle) {
         if (bundle != null) {
 //            this.courseVersion = bundle.getString("courseVersion ");
+            this.courseId = bundle.getInt("user_id");
             this.courseTitle = bundle.getString("title");
             this.startingDate = bundle.getString("starting_date");
             this.days = bundle.getString("days");
@@ -188,7 +191,16 @@ public class Course {
         this.days = days;
     }
 
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
+    }
+
     //    private String courseVersion;
+    private int courseId;
     private String courseTitle;
     private String startingDate;
     private String days;

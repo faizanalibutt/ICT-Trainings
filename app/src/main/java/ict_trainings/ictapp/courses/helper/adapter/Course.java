@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,11 +41,23 @@ public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.mod
     private List<ict_trainings.ictapp.courses.helper.model.Course> courseList;
     private OkHttpClient okHttpClient = new OkHttpClient();
 
+    private LruCache<Integer, Bitmap> imageCache;
+
     public Course(Context context, int resource, List<ict_trainings.ictapp.courses.helper.model.Course>
             objects) {
         super(context, resource, objects);
         this.context = context;
         this.courseList = objects;
+
+        final int maxMemory = (int)(Runtime.getRuntime().maxMemory() /1024);
+        final int cacheSize = maxMemory / 8;
+        Log.d("cache", String.valueOf(cacheSize));
+        imageCache = new LruCache<Integer, Bitmap>(cacheSize){
+            @Override
+            protected int sizeOf(Integer key, Bitmap value) {
+                return super.sizeOf(key, value);
+            }
+        };
     }
 
     @NonNull
@@ -57,7 +70,9 @@ public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.mod
 
 //        progressBar = (ProgressBar) view.findViewById(R.id.pbr);
 //        progressBar.setVisibility(View.VISIBLE);
-        if (course.getBitmap() != null) {
+
+        Bitmap bitmap = imageCache.get(course.getCourseId());
+        if (bitmap != null) {
             TextView textTitle = (TextView) view.findViewById(R.id.list_title);
             textTitle.setText(course.getCourseTitle());
             TextView textDesc = (TextView) view.findViewById(R.id.list_desc);
@@ -112,6 +127,7 @@ public class Course extends ArrayAdapter<ict_trainings.ictapp.courses.helper.mod
         @Override
         protected void onPostExecute(CourseView courseView) {
             super.onPostExecute(courseView);
+//            imageCache.put(courseView.course.getCourseId(), courseView.bitmap);
             ImageView imageView = (ImageView) courseView.view.findViewById(R.id.list_imageView);
             imageView.setImageBitmap(courseView.bitmap);
             courseView.course.setBitmap(courseView.bitmap);

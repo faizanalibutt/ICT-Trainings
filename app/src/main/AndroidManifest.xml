@@ -33,11 +33,13 @@
 
         <activity
             android:name="ict_trainings.ictapp.maps.MapsActivity"
+            android:launchMode="singleTop"
             android:label="@string/title_activity_maps"/>
 
         <activity
             android:name="ict_trainings.ictapp.courses.course_detail.CourseDetail"
-            android:label="Course Detail" />
+            android:label="Course Detail"
+            android:parentActivityName="ict_trainings.ictapp.ICThome" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -77,9 +79,7 @@
         </activity>
         <activity
             android:name="ict_trainings.ictapp.courses.latest_courses.latest_courses"
-            android:label="Latest Courses">
-
-        </activity>
+            android:label="Latest Courses"/>
     </application>
 
 </manifest>

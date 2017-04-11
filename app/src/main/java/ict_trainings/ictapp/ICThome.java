@@ -65,16 +65,11 @@ public class ICThome extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -113,8 +108,8 @@ public class ICThome extends AppCompatActivity
                     (R.id.fragmentContainer, gallery).commit();
         } else if (id == R.id.nav_home){
             Home home = new Home();
-            getSupportFragmentManager().beginTransaction().add
-                    (R.id.fragmentContainer, home).commit();
+            getSupportFragmentManager().beginTransaction().replace
+                    (R.id.fragmentContainer, home).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -17,7 +17,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listViewfragment"
+        android:id="@android:id/list"
         android:divider="#FFFFFF"
         android:clipToPadding="false"
         android:paddingBottom="8dp"
