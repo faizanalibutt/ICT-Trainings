@@ -34,7 +34,7 @@ public class Home extends Fragment {
         mViewPager = (ViewPager) view.findViewById(R.id.viewhome);
         HomeImageAdapter adapterView = new HomeImageAdapter(getActivity());
         mViewPager.setAdapter(adapterView);
-        pageSwitcher(5);
+        pageSwitcher(3);
         return view;
     }
 
@@ -54,7 +54,7 @@ public class Home extends Fragment {
             // to call runOnUiThread to do work on UI thread.
             getActivity().runOnUiThread(new Runnable() {
                 public void run() {
-                    if (page > 6) { // In my case the number of pages are 5
+                    if (page > 7) { // In my case the number of pages are 8
                         timer.cancel();
 //                        // Showing a toast for just testing purpose
 //                        Toast.makeText(getActivity(), "Timer stopped",
@@ -63,11 +63,11 @@ public class Home extends Fragment {
                             @Override
                             public void run() {
                                 page = 0;
-                                pageSwitcher(5);
+                                pageSwitcher(3);
                             }
                         }, 3000);
                     } else {
-                        mViewPager.setCurrentItem(page++);
+                        mViewPager.setCurrentItem(++page);
                     }
                 }
             });
