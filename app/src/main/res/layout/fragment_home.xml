@@ -1,68 +1,65 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/aboutfragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context="ict_trainings.ictapp.home.Home">
-<RelativeLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/aboutfragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:context="ict_trainings.ictapp.ICThome">
 
-    android:id="@+id/fragmentcourse"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    tools:context="ict_trainings.ictapp.ICThome">
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewhome"
+    <RelativeLayout
+        android:id="@+id/fragmentcourse"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewhome"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewhome"
+            android:layout_marginTop="10dp"
+            android:text="At ICT Trainings, we deliver both standard and customized/bespoke training courses for a wide range of technology vendors like Cisco®, Juniper®, Microsoft®, RedHat®, Adobe®, Java®, PHP®, and much more!"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textIsSelectable="false"
+            android:textSize="14sp"
+            tools:ignore="RtlCompat"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginTop="100dp"
+            android:text="Our courses will suit beginners as well as advanced users to augment their technical capabilities to excel in career. Furthermore, our job section always keeps on posting local and international placements."
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="14sp"/>
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/viewhome"
-        android:layout_marginTop="10dp"
-        android:text="At ICT Trainings, we deliver both standard and customized/bespoke training courses for a wide range of technology vendors like Cisco®, Juniper®, Microsoft®, RedHat®, Adobe®, Java®, PHP®, and much more!"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textIsSelectable="false"
-        android:textSize="14sp"
-        tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginTop="180dp"
+            android:text="ICT Trainings can run courses in customers premises, if required. Through our technologically advanced infrastructure, DISTANT LEARNING is among major focus of ICT Trainings. We deliver skills to locals from any part of the world via innovative methodologies that comprise of lectures and dedicated access to equipment/racks. Engineering Your Career."
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="14sp"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_marginTop="100dp"
-        android:text="Our courses will suit beginners as well as advanced users to augment their technical capabilities to excel in career. Furthermore, our job section always keeps on posting local and international placements."
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="14sp" />
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_marginTop="180dp"
-        android:text="ICT Trainings can run courses in customers premises, if required. Through our technologically advanced infrastructure, DISTANT LEARNING is among major focus of ICT Trainings. We deliver skills to locals from any part of the world via innovative methodologies that comprise of lectures and dedicated access to equipment/racks. Engineering Your Career."
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="14sp" />
-
-
-</RelativeLayout>
-    </ScrollView>
+    </RelativeLayout>
+</ScrollView>
