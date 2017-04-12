@@ -61,5 +61,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_gallery">Image_Gallery</string>
+    <string name="h_par1">At ICT Trainings, we deliver both standard and customized/bespoke training courses for a wide range of technology vendors like Cisco®, Juniper®, Microsoft®, RedHat®, Adobe®, Java®, PHP®, and much more!</string>
+    <string name="h_par2">Our courses will suit beginners as well as advanced users to augment their technical capabilities to excel in career. Furthermore, our job section always keeps on posting local and international placements.</string>
+    <string name="h_par3">ICT Trainings can run courses in customers premises, if required. Through our technologically advanced infrastructure, DISTANT LEARNING is among major focus of ICT Trainings. We deliver skills to locals from any part of the world via innovative methodologies that comprise of lectures and dedicated access to equipment/racks. Engineering Your Career.</string>
 
 </resources>
