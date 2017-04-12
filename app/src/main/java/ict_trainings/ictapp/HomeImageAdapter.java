@@ -32,7 +32,7 @@ public class HomeImageAdapter extends PagerAdapter {
 
     private int[] sliderImagesId = new int[]{
             R.drawable.a, R.drawable.b, R.drawable.c,
-            R.drawable.d, R.drawable.e, R.drawable.f,R.drawable.g,R.drawable.h,
+            R.drawable.d, R.drawable.e, R.drawable.f,R.drawable.g,R.drawable.h
     };
 
     @Override
