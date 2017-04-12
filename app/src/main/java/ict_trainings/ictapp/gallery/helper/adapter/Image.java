@@ -88,8 +88,7 @@ public class Image extends ArrayAdapter<ict_trainings.ictapp.gallery.helper.mode
             ict_trainings.ictapp.gallery.helper.model.Image image = courseVIew.image;
             try {
                 // TODO: 3/14/2017 reuse the given link to download banners
-                String imageURL =
-                        PHOTOS_BASE_URL_ICONS + image.getImageTitle();
+                String imageURL = PHOTOS_BASE_URL_ICONS + image.getImageTitle();
                 HttpURLConnection httpURLConnection = okHttpClient.open(new URL(imageURL));
                 InputStream inputStream = httpURLConnection.getInputStream();
                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
