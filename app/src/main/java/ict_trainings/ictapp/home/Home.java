@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,10 +60,10 @@ public class Home extends Fragment {
 //                        // Showing a toast for just testing purpose
 //                        Toast.makeText(getActivity(), "Timer stopped",
 //                                Toast.LENGTH_LONG).show();
-                        page = 0;
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
+                                page = 0;
                                 pageSwitcher(3);
                             }
                         }, 3000);
@@ -72,5 +73,19 @@ public class Home extends Fragment {
                 }
             });
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("fragment_home", "onPause called");
+        timer.cancel();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("fragment_home", "onStop called");
+        timer.cancel();
     }
 }

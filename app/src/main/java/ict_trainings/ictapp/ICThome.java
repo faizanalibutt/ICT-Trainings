@@ -89,11 +89,9 @@ public class ICThome extends AppCompatActivity
         } else if (id == R.id.rq_course) {
             Intent intent = new Intent(ICThome.this, Course_Registration.class);
             startActivity(intent);
-            finish();
         } else if (id == R.id.latest_courses) {
             Intent intent = new Intent(ICThome.this, latest_courses.class);
             startActivity(intent);
-            finish();
         }else if (id == R.id.ict_group) {
             About_ICT ab_ict = About_ICT.newInstance("about1", "about2");
             getSupportFragmentManager().beginTransaction().replace
@@ -101,15 +99,12 @@ public class ICThome extends AppCompatActivity
         } else if (id == R.id.ict_contact) {
             Intent intent = new Intent(ICThome.this, MapsActivity.class);
             startActivity(intent);
-            finish();
         } else if (id == R.id.review) {
             Intent intent = new Intent(ICThome.this, rate.class);
             startActivity(intent);
-            finish();
         } else if (id == R.id.events) {
             Intent intent = new Intent(ICThome.this, Events.class);
             startActivity(intent);
-            finish();
         } else if (id == R.id.gallery){
             ImageGallery gallery = ImageGallery.newInstance("course1", "course2");
             home = new Home();
