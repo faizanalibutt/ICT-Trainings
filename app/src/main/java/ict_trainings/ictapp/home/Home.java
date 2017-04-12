@@ -74,7 +74,6 @@ public class Home extends Fragment {
             });
         }
     }
-
     @Override
     public void onPause() {
         super.onPause();
@@ -88,4 +87,5 @@ public class Home extends Fragment {
         Log.d("fragment_home", "onStop called");
         timer.cancel();
     }
+
 }
