@@ -44,6 +44,10 @@ public class ICThome extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Home home = new Home();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, home).commit();
+
     }
 
     @Override
