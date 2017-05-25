@@ -9,8 +9,7 @@
         android:contentDescription="@string/imageIcon"
         android:layout_gravity="center"
         android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        android:src="@drawable/ict_logo" />
+        android:adjustViewBounds="true" />
 
     <TextView
         android:id="@+id/image_name"

@@ -18,7 +18,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import ict_trainigs.ictapp.R;
 import ict_trainings.ictapp.ICThome;
-import ict_trainings.ictapp.courses.course_detail.CourseDetail;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 

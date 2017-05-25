@@ -6,7 +6,7 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-import static ict_trainings.ictapp.courses.helper.fragment.Course.API_LINK;
+import static ict_trainings.ictapp.courses.course.fragment.Course.API_LINK;
 
 class CourseRequest extends StringRequest {
     private static final String REGISTER_REQUEST_URL = "http://" + API_LINK +"/php/RequestCourse.php";

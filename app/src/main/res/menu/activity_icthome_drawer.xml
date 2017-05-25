@@ -6,10 +6,10 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ict_home"
             android:title="@string/nav_home" />
-        <item
+        <!--<item
             android:id="@+id/events"
-            android:icon="@drawable/ic_menu_share"
-            android:title="@string/nav_event" />
+            android:icon="@drawable/event"
+            android:title="@string/nav_event" />!-->
         <item
             android:id="@+id/gallery"
             android:icon="@drawable/ic_menu_gallery"
@@ -23,18 +23,18 @@
             <item
                 android:id="@+id/course"
                 android:title="@string/nav_cdetail"
-                android:icon="@drawable/ic_menu_camera" />
+                android:icon="@drawable/courses_detail" />
             <item
                 android:id="@+id/review"
                 android:title="@string/nav_std_review"
-                android:icon="@drawable/ic_menu_slideshow" />
+                android:icon="@drawable/courses_detail" />
             <item
                 android:id="@+id/latest_courses"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/latest_courses"
                 android:title="@string/nav_lat_course" />
             <item
                 android:id="@+id/rq_course"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/rq_course"
                 android:title="@string/nav_req_course" />
         </menu>
     </item>
@@ -46,11 +46,11 @@
             <item
                 android:id="@+id/ict_group"
                 android:title="@string/nav_ict_group"
-                android:icon="@drawable/ic_menu_share" />
+                android:icon="@drawable/group" />
             <item
                 android:id="@+id/ict_contact"
                 android:title="@string/nav_contact_map"
-                android:icon="@drawable/ic_menu_share" />
+                android:icon="@drawable/map" />
         </menu>
     </item>
 

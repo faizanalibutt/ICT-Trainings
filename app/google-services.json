@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "649453811378",
-    "firebase_url": "https://ict-trainings-c38de.firebaseio.com",
-    "project_id": "ict-trainings-c38de",
-    "storage_bucket": "ict-trainings-c38de.appspot.com"
+    "project_number": "520851274580",
+    "firebase_url": "https://notify-6559d.firebaseio.com",
+    "project_id": "notify-6559d",
+    "storage_bucket": "notify-6559d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:649453811378:android:ec9806657ab76908",
+        "mobilesdk_app_id": "1:520851274580:android:ec9806657ab76908",
         "android_client_info": {
           "package_name": "ict_trainigs.ictapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "649453811378-8tsmhn7olokjmsd40ooi9vlqrn8rae0a.apps.googleusercontent.com",
+          "client_id": "520851274580-7985bt5ucnahod3upubrqj2vlt38ei8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ict_trainigs.ictapp",
+            "certificate_hash": "8c1edbda9dffa45346d3306f1576f55b11579190"
+          }
+        },
+        {
+          "client_id": "520851274580-l9342icogo6n3fdfm4j0jrn6ff4un8ik.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCol7HGOkOE1HkrmVIYSuQ2lD3t0uDmLpk"
+          "current_key": "AIzaSyAvw-WVhPVkY3h8eXsL7jdpzxrEiUS5DTk"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520851274580-l9342icogo6n3fdfm4j0jrn6ff4un8ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

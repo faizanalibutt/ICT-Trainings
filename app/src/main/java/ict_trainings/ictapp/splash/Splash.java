@@ -9,24 +9,34 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import ict_trainigs.ictapp.R;
 import ict_trainings.ictapp.ICThome;
-import ict_trainings.ictapp.home.Home;
 
 public class Splash extends AppCompatActivity {
 
+    private static final String TAG = Splash.class.getSimpleName();
     ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        imageView = (ImageView) findViewById(R.id.ictlogo);
+        imageView.setImageResource(R.drawable.ict_logo);
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.hide();
-        if(isOnline()){
+        if (getIntent().getExtras() != null) {
+            for (String key : getIntent().getExtras().keySet()) {
+                Object value = getIntent().getExtras().get(key);
+                Log.d(TAG, " Value is: " + value + " Key is: " + key);
+            }
+        }
+        if (isOnline()) {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -36,11 +46,9 @@ public class Splash extends AppCompatActivity {
             }, 3000);
         } else
             Toast.makeText(this, "No Internet Connection", Toast.LENGTH_LONG).show();
-        imageView = (ImageView) findViewById(R.id.ictlogo);
-        imageView.setImageResource(R.drawable.ict_logo);
     }
 
-    protected boolean isOnline(){
+    protected boolean isOnline() {
         ConnectivityManager conManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netinfo = conManager.getActiveNetworkInfo();
         return netinfo != null && netinfo.isConnectedOrConnecting();

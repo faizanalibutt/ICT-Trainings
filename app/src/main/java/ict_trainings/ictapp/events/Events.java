@@ -1,15 +1,12 @@
 package ict_trainings.ictapp.events;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import ict_trainigs.ictapp.R;
 import ict_trainings.ictapp.ICThome;
-import ict_trainings.ictapp.courses.latest_courses.latest_courses;
 
 public class Events extends AppCompatActivity {
 
@@ -17,20 +14,9 @@ public class Events extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
-
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
-        TextView eveTxt = (TextView) findViewById(R.id.eveTxt);
-        if(extras != null) {
-            String notify = extras.getString(EventService.TAG);
-            Log.d(EventService.TAG, notify + " coming notify");
-            eveTxt.setText(notify);
-        }
-
+        android.support.v7.app.ActionBar actbar = getSupportActionBar();
+        assert actbar != null;
+        actbar.setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

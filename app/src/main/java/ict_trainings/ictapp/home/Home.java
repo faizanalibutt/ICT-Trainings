@@ -4,20 +4,16 @@ package ict_trainings.ictapp.home;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 import ict_trainigs.ictapp.R;
-import ict_trainings.ictapp.HomeImageAdapter;
 
 public class Home extends Fragment {
 
@@ -55,7 +51,7 @@ public class Home extends Fragment {
             // to call runOnUiThread to do work on UI thread.
             getActivity().runOnUiThread(new Runnable() {
                 public void run() {
-                    if (page > 7) { // In my case the number of pages are 8
+                    if (page > 4) { // In my case the number of pages are 8
                         timer.cancel();
 //                        // Showing a toast for just testing purpose
 //                        Toast.makeText(getActivity(), "Timer stopped",

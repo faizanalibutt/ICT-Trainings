@@ -3,7 +3,6 @@ package ict_trainings.ictapp.gallery.helper.fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -20,10 +18,9 @@ import java.util.List;
 
 import ict_trainigs.ictapp.R;
 import ict_trainings.ictapp.HttpManager;
-import ict_trainings.ictapp.courses.helper.fragment.Course;
 import ict_trainings.ictapp.gallery.helper.model.Image;
 
-import static ict_trainings.ictapp.courses.helper.fragment.Course.API_LINK;
+import static ict_trainings.ictapp.courses.course.fragment.Course.API_LINK;
 
 public class ImageGallery extends Fragment {
     // TODO: Rename parameter arguments, choose names that match

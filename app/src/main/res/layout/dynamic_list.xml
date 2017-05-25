@@ -20,6 +20,7 @@
         <ImageView
             android:id="@+id/list_imageView"
             style="@style/CourseImageBar"
+            android:src="@drawable/ict_imgholder"
             android:contentDescription="@string/imageIcon"
             android:scaleType="fitXY"/>
 

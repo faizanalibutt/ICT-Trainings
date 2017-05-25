@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ import java.util.List;
 
 import ict_trainigs.ictapp.R;
 
-import static ict_trainings.ictapp.courses.helper.fragment.Course.PHOTOS_BASE_URL_ICONS;
+import static ict_trainings.ictapp.courses.course.fragment.Course.PHOTOS_BASE_IMAGE_GALLERY;
 
 /**
  * Created by FaiZi bUtt on 9/23/2016.
@@ -56,7 +57,7 @@ public class Image extends ArrayAdapter<ict_trainings.ictapp.gallery.helper.mode
 //        progressBar.setVisibility(View.VISIBLE);
         if (image.getBitmap() != null) {
             TextView textTitle = (TextView) view.findViewById(R.id.image_name);
-            textTitle.setText(image.getImageTitle());
+            textTitle.setText(image.getImageDes());
         } else {
             Image_View container = new Image_View();
             container.image = image;
@@ -64,7 +65,7 @@ public class Image extends ArrayAdapter<ict_trainings.ictapp.gallery.helper.mode
             Image_Gallery loader = new Image_Gallery();
             loader.execute(container);
             TextView textTitle = (TextView) view.findViewById(R.id.image_name);
-            textTitle.setText(image.getImageTitle());
+            textTitle.setText(image.getImageDes());
         }
         return view;
     }
@@ -88,7 +89,8 @@ public class Image extends ArrayAdapter<ict_trainings.ictapp.gallery.helper.mode
             ict_trainings.ictapp.gallery.helper.model.Image image = courseVIew.image;
             try {
                 // TODO: 3/14/2017 reuse the given link to download banners
-                String imageURL = PHOTOS_BASE_URL_ICONS + image.getImageTitle();
+                String imageURL = PHOTOS_BASE_IMAGE_GALLERY + image.getImageTitle();
+                Log.e("Image", imageURL);
                 HttpURLConnection httpURLConnection = okHttpClient.open(new URL(imageURL));
                 InputStream inputStream = httpURLConnection.getInputStream();
                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);

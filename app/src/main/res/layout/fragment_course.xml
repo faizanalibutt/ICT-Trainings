@@ -14,15 +14,27 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 
+    <TextView
+        android:id="@+id/list_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/loader"
+        android:textColor="@color/Jet_Black"
+        android:textSize="15sp"
+        android:layout_marginTop="4dp"
+        />
+
     <ListView
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@android:id/list"
-        android:divider="#FFFFFF"
-        android:clipToPadding="false"
-        android:paddingBottom="8dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        android:divider="#FFFFFF"
+        android:paddingBottom="8dp"/>
 
 </RelativeLayout>
